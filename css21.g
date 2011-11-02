@@ -289,7 +289,7 @@ fragment    NMCHAR      : '_'
 fragment    NAME        : NMCHAR+   ;
 
 fragment    URL         : (
-                              '!'|'#'|'$'|'%'|'&'|'*'|'-'|'~'|'*'..'['|']'..'~'
+                              '!'|'#'|'$'|'%'|'&'|'*'..'['|']'..'~'
                             | NONASCII
                             | ESCAPE
                           )*
