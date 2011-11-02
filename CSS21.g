@@ -15,7 +15,7 @@
 // This grammar is free to use providing you retain everything in this header comment
 // section.
 //
-grammar css21;
+grammar CSS21;
 
 // -------------
 // Main rule.   This is the main entry rule for the parser, the top level
