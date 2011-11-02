@@ -1,0 +1,35 @@
+/*1314160948,169776067*/
+
+.UIBeep{background:#e1e6ee;border-bottom:1px solid #bfcade;overflow:hidden;padding:3px 0;clear:right}
+.UIBeeper .UIBeeper_Full{background-color:#e1e6ee;border:1px solid #99a8c7;-webkit-border-radius:3px;margin:0;padding:3px}
+.UIBeeper .UIBeeper_Full:hover{background-color:#cad1de}
+.UIBeeper .UIBeep_Bottom{padding-bottom:0}
+.UIBeeper .UIBeep_Top{padding-top:0}
+.UIBeep .UIBeep_Title_Outgoing{font-weight:bold}
+.UIBeep .undo_link{margin-left:6px}
+.UIBeeper .UIBeep .UIBeep_Intentional .beeper_x{
+  background: url(https://s-static.ak.facebook.com/rsrc.php/v1/yQ/r/HO_GBYmDiTm.gif) no-repeat;
+  display:none;
+  float:right;height:16px;width:16px;margin-top:6px}
+.UIBeeper .UIBeep .UIBeep_NonIntentional .beeper_x{float:right;height:16px;width:16px;margin-top:6px;background:url(https://s-static.ak.facebook.com/rsrc.php/v1/yQ/r/HO_GBYmDiTm.gif) no-repeat;visibility:hidden}
+.UIBeep .beeper_x:hover{background:url(https://b.s-static.ak.facebook.com/rsrc.php/v1/yj/r/euPl6cXMZbg.gif) no-repeat !important}
+.UIBeep a.UIBeep_NonIntentional:hover,.UIBeep a.UIBeep_Intentional:hover{text-decoration:none}
+.UIBeep_Selected .beeper_x{display:block !important;visibility:visible !important;margin-left:4px}
+.UIBeeper .UIBeep_Selected{background:#cad1de}
+.UIBeep_Selected .UIBeep_Icon{margin-right:2px}
+.UIBeep_Selected .UIBeep_Intentional .UIBeep_Icon{display:none}
+.UIBeep_Fading .UIBeep_Title{display:none}
+.UIBeep .UIBeep_Title{padding:5px 0}
+.UIBeep .UIBeep_Intentional .UIBeep_Title{margin:0 9px 0 51px}
+.UIBeep .UIBeep_NonIntentional .UIBeep_Title{margin:0 20px 0 30px}
+.UIBeeper .UIBeep_Intentional .UIBeep_Title{font-size: 11px;color:#000;line-height:1.3}
+.UIBeep .UIBeep_Intentional .UIBeep_Pic{float:left;font-size: 1px;margin:4px 8px;text-align:center}
+.UIBeep .UIBeep_NonIntentional .UIBeep_Icon{float:left;width:20px;height:20px;text-align:center;margin:5px 5px}
+.UIBeep .UIBeep_Intentional .UIBeep_Icon{float:right;text-align:center;width:20px;height:20px;margin-right:5px;margin-top:5px}
+.UIBeep .UIBeep_Intentional .UIBeep_Pic img.beeper_thumb{height:35px;width:35px}
+.UIBeep .UIBeep_Intentional .UIBeep_Pic img.beeper_icon{height:16px;width:16px}
+.UIBeeper{width:230px;left:15px;bottom:30px;position:fixed;z-index:99}
+.UIBeeper .UIBeep_Bottom{border-bottom:none}
+.UIBeeper .UIBeep .beeper_body{margin-top:4px}
+
+#bootloader_awtL8 { height: 42px; }
