@@ -7,10 +7,7 @@
 .UIBeeper .UIBeep_Top{padding-top:0}
 .UIBeep .UIBeep_Title_Outgoing{font-weight:bold}
 .UIBeep .undo_link{margin-left:6px}
-.UIBeeper .UIBeep .UIBeep_Intentional .beeper_x{
-  background: url(https://s-static.ak.facebook.com/rsrc.php/v1/yQ/r/HO_GBYmDiTm.gif) no-repeat;
-  display:none;
-  float:right;height:16px;width:16px;margin-top:6px}
+.UIBeeper .UIBeep .UIBeep_Intentional .beeper_x{background: url(https://s-static.ak.facebook.com/rsrc.php/v1/yQ/r/HO_GBYmDiTm.gif) no-repeat;display:none;float:right;height:16px;width:16px;margin-top:6px}
 .UIBeeper .UIBeep .UIBeep_NonIntentional .beeper_x{float:right;height:16px;width:16px;margin-top:6px;background:url(https://s-static.ak.facebook.com/rsrc.php/v1/yQ/r/HO_GBYmDiTm.gif) no-repeat;visibility:hidden}
 .UIBeep .beeper_x:hover{background:url(https://b.s-static.ak.facebook.com/rsrc.php/v1/yj/r/euPl6cXMZbg.gif) no-repeat !important}
 .UIBeep a.UIBeep_NonIntentional:hover,.UIBeep a.UIBeep_Intentional:hover{text-decoration:none}
