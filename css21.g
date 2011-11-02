@@ -78,7 +78,7 @@ bodyset
 page
     : PAGE_SYM pseudoPage?
         LBRACE
-            declaration SEMI (declaration SEMI)*
+            declaration (SEMI declaration)* SEMI*
         RBRACE
     ;
 
@@ -110,7 +110,7 @@ property
 ruleSet
     : selector (COMMA selector)*
         LBRACE
-            declaration SEMI (declaration SEMI)*
+            declaration (SEMI declaration)* SEMI*
         RBRACE
     ;
 
