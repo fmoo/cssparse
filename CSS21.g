@@ -166,7 +166,7 @@ attrib
 ;
 
 pseudo
-    : COLON
+    : COLON COLON?
             IDENT
                 ( // Function
 
