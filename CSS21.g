@@ -97,15 +97,6 @@ operator
     |
     ;
 
-function_operator
-    : SOLIDUS
-    | COMMA
-    | OPEQ
-    | MINUS
-    | PLUS
-    |
-    ;
-
 combinator
     : PLUS
     | GREATER
@@ -198,7 +189,7 @@ prio
     ;
 
 style
-    : term+
+    : expr
     ;
 
 expr
