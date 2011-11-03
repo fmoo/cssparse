@@ -163,6 +163,7 @@ attrib
                     | DASHMATCH
                     | STARTSWITH
                     | ENDSWITH
+                    | CONTAINS
                 )
                 (
                       IDENT
@@ -541,7 +542,7 @@ INCLUDES        : '~='      ;
 DASHMATCH       : '|='      ;
 STARTSWITH      : '^='      ;
 ENDSWITH        : '$='      ;
-
+CONTAINS        : '*='      ;
 
 GREATER         : '>'       ;
 LBRACE          : '{'       { in_body++; } ;

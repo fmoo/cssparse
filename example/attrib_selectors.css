@@ -11,3 +11,11 @@
         background: url("document.png") center right no-repeat;
         padding-right: 12px;
 }
+
+#bodyContent a.external[href $=".pdf"], #bodyContent a.external[href $=".PDF"],
+#bodyContent a.external[href *=".pdf#"], #bodyContent a.external[href *=".PDF#"],
+#bodyContent a.external[href *=".pdf?"], #bodyContent a.external[href *=".PDF?"],
+.link-document {
+  background: url("document.png") center right no-repeat;
+  padding-right: 12px;
+}
