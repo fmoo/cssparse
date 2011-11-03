@@ -175,12 +175,11 @@ attrib
 ;
 
 pseudo
-    : COLON COLON?
-            IDENT
-                ( // Function
-
+    : COLON PSEUDO_NOT LPAREN simpleSelector RPAREN
+    | COLON COLON?
+      IDENT ( // Function
                     LPAREN IDENT? RPAREN
-                )?
+            )?
     ;
 
 declaration
@@ -560,6 +559,9 @@ LPAREN          : '('       ;
 RPAREN          : ')'       ;
 COMMA           : ','       ;
 DOT             : '.'       ;
+
+// Random important reserved words, like specific pseudo-classes
+PSEUDO_NOT      : N O T     ;
 
 // -----------------
 // Literal strings. Delimited by either ' or "

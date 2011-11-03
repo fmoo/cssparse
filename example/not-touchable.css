@@ -1,0 +1,6 @@
+.iphone.app a:not(.touchable):link,
+.iphone.app a:not(.touchable):visited,
+.iphone.app a:not(.touchable):focus,
+.iphone.app a:not(.touchable):hover {
+  color: #576b95;
+}
