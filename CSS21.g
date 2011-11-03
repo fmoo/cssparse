@@ -161,6 +161,8 @@ attrib
                       OPEQ
                     | INCLUDES
                     | DASHMATCH
+                    | STARTSWITH
+                    | ENDSWITH
                 )
                 (
                       IDENT
@@ -537,6 +539,9 @@ CDC             : '-->'
 
 INCLUDES        : '~='      ;
 DASHMATCH       : '|='      ;
+STARTSWITH      : '^='      ;
+ENDSWITH        : '$='      ;
+
 
 GREATER         : '>'       ;
 LBRACE          : '{'       { in_body++; } ;

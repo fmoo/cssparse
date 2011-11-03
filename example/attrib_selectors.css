@@ -1,0 +1,13 @@
+#mw_content a[href ^="irc://"],
+#mw_content a.extiw[href ^="irc://"],
+.link-irc {
+        background: url(discussionitem_icon.gif) center right no-repeat;
+        padding-right: 18px;                                                          
+}
+
+#mw_content a.external[href $=".ogg"], #mw_content a.external[href $=".OGG"],
+#mw_content a.external[href $=".mid"], #mw_content a.external[href $=".MID"],
+.link-document {
+        background: url("document.png") center right no-repeat;
+        padding-right: 12px;
+}
