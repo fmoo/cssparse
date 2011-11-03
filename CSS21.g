@@ -93,6 +93,16 @@ pseudoPage
 operator
     : SOLIDUS
     | COMMA
+    | OPEQ
+    |
+    ;
+
+function_operator
+    : SOLIDUS
+    | COMMA
+    | OPEQ
+    | MINUS
+    | PLUS
     |
     ;
 
@@ -180,15 +190,25 @@ pseudo
     ;
 
 declaration
-    : property COLON expr prio? SLASHNINE?
+    : property COLON style prio? SLASHNINE?
     ;
 
 prio
     : IMPORTANT_SYM
     ;
 
+style
+    : term+
+    ;
+
 expr
     : term (operator term)*
+    ;
+
+function
+    : IDENT (   // Function
+                LPAREN expr RPAREN
+            )
     ;
 
 term
@@ -204,11 +224,10 @@ term
             | FREQ
         )
     | STRING
-    | IDENT (   // Function
-                LPAREN expr RPAREN
-            )?
+    | function 
     | URI
     | hexColor
+    | IDENT
     ;
 
 hexColor
