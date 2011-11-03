@@ -1,0 +1,3 @@
+.fbTimelineSummarySection .fbProfileBylineFragment:nth-child(n+5) {
+  display: none;
+}
