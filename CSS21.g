@@ -115,7 +115,7 @@ property
 ruleSet
     : selector (COMMA selector)*
         LBRACE
-            declaration (SEMI declaration)* SEMI*
+            ( declaration (SEMI declaration)* SEMI* | )
         RBRACE
     ;
 
