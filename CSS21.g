@@ -17,6 +17,10 @@
 //
 grammar CSS21;
 
+@lexer::members {
+  int in_body=0;
+}
+
 // -------------
 // Main rule.   This is the main entry rule for the parser, the top level
 //              grammar rule.
@@ -176,7 +180,7 @@ pseudo
     ;
 
 declaration
-    : property COLON expr prio?
+    : property COLON expr prio? SLASHNINE?
     ;
 
 prio
@@ -208,7 +212,7 @@ term
     ;
 
 hexColor
-    : HASH
+    : NUMHASH
     ;
 
 // ==============================================================
@@ -480,6 +484,7 @@ fragment    Z   :   ('z'|'Z') ('\r'|'\n'|'\t'|'\f'|' ')*
                         )
                 ;
 
+SLASHNINE       : '\\9'              ;
 
 // -------------
 // Comments.    Comments may not be nested, may be multilined and are delimited
@@ -524,8 +529,8 @@ INCLUDES        : '~='      ;
 DASHMATCH       : '|='      ;
 
 GREATER         : '>'       ;
-LBRACE          : '{'       ;
-RBRACE          : '}'       ;
+LBRACE          : '{'       { in_body++; } ;
+RBRACE          : '}'       { in_body--; } ;
 LBRACKET        : '['       ;
 RBRACKET        : ']'       ;
 OPEQ            : '='       ;
@@ -566,7 +571,8 @@ IDENT           : '-'? NMSTART NMCHAR*  ;
 // -------------
 // Reference.   Reference to an element in the body we are styling, such as <XXXX id="reference">
 //
-HASH            : '#' NAME              ;
+NUMHASH         : '#' HEXCHAR+      ;
+HASH            : {in_body == 0}?=> '#' NAME   ;
 
 IMPORT_SYM      : '@' I M P O R T       ;
 PAGE_SYM        : '@' P A G E           ;
