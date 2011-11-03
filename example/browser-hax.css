@@ -1,0 +1,8 @@
+.aux {
+  color: #333;
+  _color: #444;   /* IE6 only */
+  *color: #555;   /* IE6, IE7 only */
+  color: #666\9;  /* IE6, IE7, IE8. Note that the characters must be "\9" */
+  color: #777!important\9;
+  -moz-border-radius: 1em;
+}
