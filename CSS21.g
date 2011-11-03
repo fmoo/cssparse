@@ -104,7 +104,8 @@ unaryOperator
     ;
 
 property
-    : IDENT
+    : HACK_IDENT
+    | IDENT
     ;
 
 ruleSet
@@ -559,6 +560,7 @@ STRING          : '\'' ( ~('\n'|'\r'|'\f'|'\'') )*
 // -------------
 // Identifier.  Identifier tokens pick up properties names and values
 //
+HACK_IDENT      : '*' IDENT  ;
 IDENT           : '-'? NMSTART NMCHAR*  ;
 
 // -------------
