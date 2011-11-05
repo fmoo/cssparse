@@ -1,7 +1,9 @@
-grammar CssCore;
-options { language=Java; }
+grammar CSS;
 
 /*
+
+Code copied from
+http://www.bensblog.com/2008/05/23/parsing-css-with-antlr
 
 Grammar taken from
 http://www.w3.org/TR/REC-CSS2/syndata.html#tokenization
@@ -9,7 +11,7 @@ http://www.w3.org/TR/REC-CSS2/syndata.html#tokenization
 */
 
 //stylesheet  : [ CDO | CDC | S | statement ]*;
-stylesheet
+styleSheet
     :   (CDO|CDC|statement)*
     ;
 
@@ -25,7 +27,7 @@ atRule  :   ATKEYWORD any* (block | SEMICOLON)
     ;
 
 //block       : '{' S* [ any | block | ATKEYWORD S* | ';' ]* '}' S*;
-block   :   LBRACE (any|block|ATKEYWORD|SEMICOLON)* RBRACE 
+block   :   LBRACE (any|block|ATKEYWORD|SEMICOLON)* RBRACE
     ;
 
 //ruleset     : selector? '{' S* declaration? [ ';' S* declaration? ]* '}' S*;
@@ -33,8 +35,8 @@ block   :   LBRACE (any|block|ATKEYWORD|SEMICOLON)* RBRACE
 selector:   '*'
     |   '*'? (IDENT|'>'|'+'|CLASS|HASH)+
     ;
-    
-    
+
+
 ruleset :   selector? LBRACE declaration? ( SEMICOLON declaration? )* RBRACE
     ;
 
@@ -114,10 +116,10 @@ CDC :   '-->'
 //;     ;
 SEMICOLON
     :   ';'
-    ;   
-    
+    ;
+
 COLON   :   ':'
-    ;   
+    ;
 
 
 //{     \{
@@ -216,12 +218,12 @@ F_STRING:   F_STRING1
 //string1   \"([\t !#$%&(-~]|\\{nl}|\'|{nonascii}|{escape})*\"
 fragment
 F_STRING1
-    :   '"' ('\t'|' '|'!'|'#'|'$'|'%'|'&'|'\''|'.'|F_LETTER|F_DIGIT)* '"' 
+    :   '"' ('\t'|' '|'!'|'#'|'$'|'%'|'&'|'\''|'.'|F_LETTER|F_DIGIT)* '"'
     ;
 //string2   \'([\t !#$%&(-~]|\\{nl}|\"|{nonascii}|{escape})*\'
 fragment
 F_STRING2
-    :   '\'' ('\t'|' '|'!'|'#'|'$'|'%'|'&'|'.'|F_LETTER|F_DIGIT)* '\'' 
+    :   '\'' ('\t'|' '|'!'|'#'|'$'|'%'|'&'|'.'|F_LETTER|F_DIGIT)* '\''
     ;
 
 //nl    \n|\r\n|\r|\f
@@ -231,12 +233,12 @@ F_NL    :   '\n'
     |   '\r'
     |   '\f'
     ;
-    
+
 fragment
 F_LETTER:   'a'..'z'
     |   'A'..'Z'
     ;
-    
+
 fragment
 F_DIGIT :   '0'..'9'
     ;
