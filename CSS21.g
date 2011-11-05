@@ -15,7 +15,7 @@
 // This grammar is free to use providing you retain everything in this header comment
 // section.
 //
-grammar CSS21;
+grammar CSS;
 
 @lexer::members {
   int in_body=0;
