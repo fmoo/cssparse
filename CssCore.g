@@ -125,11 +125,11 @@ SEMICOLON
     :   ';'
     ;
 
-COLON   :   ':'
-    ;
+COLON   :   ':';
 
-USCORE  :   '_'
-    ;
+COMMA   :   ',';
+
+USCORE  :   '_';
 
 PRIO    :   '!' S?
             ('i'|'I')
