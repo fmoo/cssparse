@@ -239,12 +239,12 @@ F_STRING:   F_STRING1
 //string1   \"([\t !#$%&(-~]|\\{nl}|\'|{nonascii}|{escape})*\"
 fragment
 F_STRING1
-    :   '"' ('\t'|' '|'!'|'#'|'$'|'%'|'&'|'\''|'.'|F_LETTER|F_DIGIT)* '"'
+    :   '"' ( ~('\n'|'\r'|'\f'|'"') )* '"'
     ;
 //string2   \'([\t !#$%&(-~]|\\{nl}|\"|{nonascii}|{escape})*\'
 fragment
 F_STRING2
-    :   '\'' ('\t'|' '|'!'|'#'|'$'|'%'|'&'|'.'|F_LETTER|F_DIGIT)* '\''
+    :   '\'' ( ~('\n'|'\r'|'\f'|'\'') )* '\''
     ;
 
 //nl    \n|\r\n|\r|\f
