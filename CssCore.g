@@ -44,7 +44,7 @@ ruleset :   selector? LBRACE declaration? ( SEMICOLON declaration? )* RBRACE
 
 //declaration : property ':' S* value;
 declaration
-    :   property COLON value
+    :   property COLON value PRIO?
     ;
 
 //property    : IDENT S*;
@@ -121,6 +121,17 @@ SEMICOLON
 COLON   :   ':'
     ;
 
+PRIO    :   '!' S?
+            ('i'|'I')
+            ('m'|'M')
+            ('p'|'P')
+            ('o'|'O')
+            ('r'|'R')
+            ('t'|'T')
+            ('a'|'A')
+            ('n'|'N')
+            ('t'|'T')
+    ;
 
 //{     \{
 LBRACE  :   '{'
