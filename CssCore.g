@@ -44,11 +44,14 @@ ruleset :   selector? LBRACE declaration? ( SEMICOLON declaration? )* RBRACE
 
 //declaration : property ':' S* value;
 declaration
-    :   property COLON value PRIO?
+    :   property COLON value PRIO? '\\9'?
     ;
 
 //property    : IDENT S*;
-property:   IDENT
+property:
+     ('*'|'_')?
+     (   IDENT
+      |  VENDOR_IDENT)
      ;
 
 //value       : [ any | block | ATKEYWORD S* ]+;
@@ -68,8 +71,11 @@ any :   (   IDENT|NUMBER|PERCENTAGE|DIMENSION|STRING|
 
 /* Tokens */
 
+
 //IDENT     {ident}
 IDENT   :   F_IDENT
+    ;
+VENDOR_IDENT  : '-' F_IDENT
     ;
 
 //ATKEYWORD     @{ident}
@@ -121,6 +127,9 @@ SEMICOLON
 COLON   :   ':'
     ;
 
+USCORE  :   '_'
+    ;
+
 PRIO    :   '!' S?
             ('i'|'I')
             ('m'|'M')
@@ -160,6 +169,7 @@ RBRACKET:   ']'
 //S     [ \t\r\n\f]+
 S   :   (' '|'\t'|'\r'|'\n'|'\f')+
         { $channel=HIDDEN; }
+    |   '\\9'
     ;
 
 //COMMENT   \/\*[^*]*\*+([^/][^*]*\*+)*\/
