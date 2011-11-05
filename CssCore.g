@@ -63,6 +63,7 @@ value   :   (any|block|ATKEYWORD)*
 //              | FUNCTION | DASHMATCH | '(' any* ')' | '[' any* ']' ] S*;
 any :   (   IDENT|NUMBER|PERCENTAGE|DIMENSION|STRING|
             HASH|INCLUDES|
+            STARTSWITH|ENDSWITH|CONTAINS|
             FUNCTION|DASHMATCH
             // TODO UNICODE_RANGE|DELIM|URI| '(' any* ')' | '[' any* ']' ] S*;
         )
@@ -189,6 +190,10 @@ INCLUDES:   '~='
 DASHMATCH
     :   '|='
     ;
+
+STARTSWITH      : '^='      ;
+ENDSWITH        : '$='      ;
+CONTAINS        : '*='      ;
 
 //DELIM     any other character not matched by the above rules
 
