@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+CURDIR=${0%/*}
+if [ "$OSTYPE" == "cygwin" ]; then
+  SEP=";"
+else
+  SEP=":"
+fi
+
+CLASSPATH="$CURDIR/../../antlr-3.4/lib/antlr-3.4-complete.jar${SEP}$CURDIR" \
+  java TestCSSParser $*
