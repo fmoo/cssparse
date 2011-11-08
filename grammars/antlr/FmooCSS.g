@@ -85,7 +85,6 @@ function_name
 selectors_group
   : selector
     ( WS* COMMA WS* selector )*
-    ( COMMA )?  // Trailing comma...
   ;
 
 selector
