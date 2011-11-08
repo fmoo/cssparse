@@ -1,0 +1,7 @@
+.fbDockChatTab.thread .uiTooltipWrap td + td {
+    padding-left: 10px;
+}
+
+.fbDockChatTab2.thread .uiTooltipWrap td+td {
+    padding-left: 10px;
+}

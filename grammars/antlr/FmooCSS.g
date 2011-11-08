@@ -80,7 +80,10 @@ selector
 
 combinator
   /* combinators can be surrounded by whitespace */
-  : PLUS WS* | GREATER WS* | TILDE WS* | WS+
+  : WS* PLUS WS*
+  | WS* GREATER WS*
+  | WS* TILDE WS*
+  | WS+
   ;
 
 simple_selector_sequence
