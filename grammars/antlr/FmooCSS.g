@@ -21,14 +21,14 @@ ruleset
   ;
 
 declaration
-  : property COLON WS* values;
+  : property COLON WS* values WS* IMPORTANT?;
 
 property
   : IDENT WS*
   ;
 
 values
-  : value (WS+ value)?
+  : value (WS+ value)*
   ;
 
 value
@@ -39,6 +39,19 @@ value
   | STRING
   | URL
   | HASH IDENT
+  | value_function;
+
+value_function
+  : IDENT LPAREN
+      (WS* value_function_param
+       (WS* COMMA WS* value_function_param)*
+      )?
+    RPAREN
+  ;
+
+value_function_param
+  : NUMBER
+  | PERCENTAGE
   ;
 
 /**
