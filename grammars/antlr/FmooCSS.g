@@ -39,7 +39,7 @@ property
   ;
 
 values
-  : value 
+  : value
     ( (WS+ value)
     | (WS* COMMA WS* value)
     | SLASH value
@@ -66,7 +66,7 @@ value_function
   : function_name LPAREN
     ( WS*
     | WS*
-      ( name_values 
+      ( name_values
       | values
       )
       WS*
