@@ -49,6 +49,7 @@ value
   | (IDENT|STRING) (COMMA WS* IDENT|STRING)*  // e.g. font list
   | URL
   | HASH
+  | MS_EXPRESSION
   | value_function;
 
 value_function
@@ -365,4 +366,8 @@ STRING
 
 URL
   :	'url(' (STRING | URLCHARS+) ')'
+  ;
+
+MS_EXPRESSION
+  : 'expression(' (~')')* ')'
   ;

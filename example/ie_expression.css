@@ -1,0 +1,3 @@
+.uiTooltipX .tooltipText {
+  _width: expression(this.offsetWidth >= 334 ? '334px' : 'auto');
+}
