@@ -84,7 +84,7 @@ value_function_param
  * with some minor tweaks
  */
 selectors_group
-  : selector ( COMMA WS* selector )*
+  : selector ( WS* COMMA WS* selector )*
   ;
 
 selector
