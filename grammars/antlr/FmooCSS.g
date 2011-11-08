@@ -226,6 +226,16 @@ NL
   |	'\r'
   ;
 
+fragment
+NESTED_PARENS
+  : '('
+      ( options {greedy=false;}
+      : ( NESTED_PARENS
+        | .)
+      )*
+    ')'
+  ;
+
 /**
  * Lexer
  */
@@ -382,5 +392,5 @@ URL
   ;
 
 MS_EXPRESSION
-  : 'expression(' (~')')* ')'
+  : 'expression' NESTED_PARENS
   ;

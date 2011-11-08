@@ -1,3 +1,10 @@
 .uiTooltipX .tooltipText {
   _width: expression(this.offsetWidth >= 334 ? '334px' : 'auto');
 }
+
+.foo .bar.baz img {
+  _clear: expression(
+    style.width = this.offsetWidth > 128 ? "128px" : (this.offsetWidth + "px"),
+    style.clear = "none", 0
+  );
+}
