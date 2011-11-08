@@ -1,8 +1,7 @@
 grammar CSS;
 
 /**
- * Only parse empty rules for now
- * TODO- updates from http://www.w3.org/TR/css3-syntax/#style
+ * Based loosely on http://www.w3.org/TR/css3-syntax/#style
  */
 styleSheet
   : ( CDO | CDC | WS | statement )*
@@ -21,7 +20,19 @@ ruleset
   ;
 
 declaration
-  : property COLON WS* values WS* IMPORTANT?;
+  : ie_prefix_hack?
+    property COLON WS*
+    values WS* IMPORTANT?
+    ie_suffix_hack?
+  ;
+
+ie_prefix_hack
+  : STAR
+  ;
+
+ie_suffix_hack
+  : SLASHNINE
+  ;
 
 property
   : IDENT WS*
