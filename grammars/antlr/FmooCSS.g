@@ -48,7 +48,7 @@ value
   | PERCENTAGE
   | DIMENSION
   | URL
-  | HASH IDENT
+  | HASH
   | value_function;
 
 value_function
@@ -84,8 +84,8 @@ combinator
 
 simple_selector_sequence
   : ( type_selector | universal )
-    ( HASH IDENT | cssclass | attrib | pseudo | negation )*
-  | ( HASH IDENT | cssclass | attrib | pseudo | negation )+
+    ( HASH | cssclass | attrib | pseudo | negation )*
+  | ( HASH | cssclass | attrib | pseudo | negation )+
   ;
 
 type_selector
@@ -144,7 +144,7 @@ negation
   ;
 
 negation_arg
-  : type_selector | universal | HASH IDENT
+  : type_selector | universal | HASH
   | cssclass | attrib | pseudo
   ;
 
@@ -216,7 +216,7 @@ IDENT
   ;
 
 HASH
-  :	'#'
+  :	'#' NMCHAR+
   ;
 
 IMPORTANT
