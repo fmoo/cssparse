@@ -14,7 +14,6 @@ statement
 
 ruleset
   : selectors_group WS* LBRACE
-      // TODO - put declarations here
       WS* declaration? (SEMI WS* declaration?)*
     RBRACE
   ;
@@ -84,7 +83,9 @@ function_name
  * with some minor tweaks
  */
 selectors_group
-  : selector ( WS* COMMA WS* selector )*
+  : selector
+    ( WS* COMMA WS* selector )*
+    ( COMMA )?  // Trailing comma...
   ;
 
 selector
