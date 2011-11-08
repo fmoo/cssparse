@@ -58,11 +58,15 @@ value
   | value_function;
 
 value_function
-  : IDENT LPAREN
+  : function_name LPAREN
       (WS* value_function_param
        (WS* COMMA WS* value_function_param)*
       )?
     RPAREN
+  ;
+
+function_name
+  : IDENT ((COLON|DOT) IDENT)*
   ;
 
 value_function_param
