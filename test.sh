@@ -14,3 +14,16 @@ for f in $(find example -type f -name '*.css'); do
     echo "OK"
   fi
 done
+
+echo "Testing Parser..."
+for f in $(find example -type f -name '*.css'); do
+  echo -n "$f: "
+  ./java/TestCSSParser $f 2>err.log 1>/dev/null
+  ERRORS=$(cat err.log | wc -l)
+  if [ $ERRORS -gt 0 ]; then
+    echo "FAIL"
+    cat err.log
+  else
+    echo "OK"
+  fi
+done
