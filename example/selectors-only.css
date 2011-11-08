@@ -1,0 +1,80 @@
+#mw_content a[href ^="irc://"],
+#mw_content a.extiw[href ^="irc://"],
+.link-irc {
+}
+
+#mw_content a.external[href $=".ogg"], #mw_content a.external[href $=".OGG"],
+#mw_content a.external[href $=".mid"], #mw_content a.external[href $=".MID"],
+.link-document {
+}
+
+#bodyContent a.external[href $=".pdf"], #bodyContent a.external[href $=".PDF"],
+#bodyContent a.external[href *=".pdf#"], #bodyContent a.external[href *=".PDF#"],
+#bodyContent a.external[href *=".pdf?"], #bodyContent a.external[href *=".PDF?"],
+.link-document {
+}
+
+.aux {
+}
+
+.MessagingCheckboxTooltip input.MessagingCheckbox {
+}
+h1 {}
+h2 {}
+dl.param dt {}
+dl.param dd {}
+dl.param ul {}
+tt, code, kbd {}
+div.source {}
+.filterMenuButton {
+}
+.linkButton {
+
+}
+.iphone.app a:not(.touchable):link,
+.iphone.app a:not(.touchable):visited,
+.iphone.app a:not(.touchable):focus,
+.iphone.app a:not(.touchable):hover {
+}
+.fbTimelineSummarySection .fbProfileBylineFragment:nth-child(n+5) {
+}
+/*1314160948,169776067*/
+
+.UIBeep{}
+.UIBeeper .UIBeeper_Full{}
+.UIBeeper .UIBeeper_Full:hover{}
+.UIBeeper .UIBeep_Bottom{}
+.UIBeeper .UIBeep_Top{}
+.UIBeep .UIBeep_Title_Outgoing{}
+.UIBeep .undo_link{}
+.UIBeeper .UIBeep .UIBeep_Intentional .beeper_x{}
+.UIBeeper .UIBeep .UIBeep_NonIntentional .beeper_x{}
+.UIBeep .beeper_x:hover{}
+.UIBeep a.UIBeep_NonIntentional:hover,.UIBeep a.UIBeep_Intentional:hover{}
+.UIBeep_Selected .beeper_x{}
+.UIBeeper .UIBeep_Selected{}
+.UIBeep_Selected .UIBeep_Icon{}
+.UIBeep_Selected .UIBeep_Intentional .UIBeep_Icon{}
+.UIBeep_Fading .UIBeep_Title{}
+.UIBeep .UIBeep_Title{}
+.UIBeep .UIBeep_Intentional .UIBeep_Title{}
+.UIBeep .UIBeep_NonIntentional .UIBeep_Title{}
+.UIBeeper .UIBeep_Intentional .UIBeep_Title{}
+.UIBeep .UIBeep_Intentional .UIBeep_Pic{}
+.UIBeep .UIBeep_NonIntentional .UIBeep_Icon{}
+.UIBeep .UIBeep_Intentional .UIBeep_Icon{}
+.UIBeep .UIBeep_Intentional .UIBeep_Pic img.beeper_thumb{}
+.UIBeep .UIBeep_Intentional .UIBeep_Pic img.beeper_icon{}
+.UIBeeper{}
+.UIBeeper .UIBeep_Bottom{}
+.UIBeeper .UIBeep .beeper_body{}
+
+#bootloader_awtL8 {}
+.dataList-row strong::-moz-selection {
+}
+.dataList-row strong::-webkit-selection {
+}
+.dataList-row strong::selection {
+}
+.SurveyListTable tr.no {
+}
