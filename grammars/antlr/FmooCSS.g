@@ -226,7 +226,7 @@ HASH
   ;
 
 IMPORTANT
-  :	'!important'
+  :	'!' WS* 'important'
   ;
 
 COMMENT

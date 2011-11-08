@@ -1,0 +1,8 @@
+.UIBeep_Selected .beeper_x{display:block !important;visibility:visible !important;margin-left:4px}
+
+#content {
+    background: none;
+    border: none ! important;
+    padding: 0 ! important;
+    margin: 0 ! important;
+}
