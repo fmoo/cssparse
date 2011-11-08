@@ -16,8 +16,29 @@ statement
 ruleset
   : selectors_group WS* LBRACE
       // TODO - put declarations here
-      WS*
+      WS* declaration? (SEMI WS* declaration?)*
     RBRACE
+  ;
+
+declaration
+  : property COLON WS* values;
+
+property
+  : IDENT WS*
+  ;
+
+values
+  : value (WS+ value)?
+  ;
+
+value
+  : IDENT
+  | NUMBER
+  | PERCENTAGE
+  | DIMENSION
+  | STRING
+  | URL
+  | HASH IDENT
   ;
 
 /**
