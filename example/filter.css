@@ -6,3 +6,9 @@
   position:   absolute;
   z-index:    5005;
 }
+
+.editButton:focus {
+  opacity: 1;
+  -ms-filter: 'alpha(opacity = 100)';
+  filter: alpha(opacity = 100);
+}

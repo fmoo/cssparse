@@ -60,7 +60,7 @@ value_function
   ;
 
 value_function_param
-  : (IDENT EQUALS)?
+  : (IDENT WS* EQUALS WS*)?
      ( NUMBER
      | PERCENTAGE
      | STRING
