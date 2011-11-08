@@ -4,6 +4,8 @@
   *color: #555;   /* IE6, IE7 only */
   color: #666\9;  /* IE6, IE7, IE8. Note that the characters must be "\9" */
   color: #777!important\9;
+  .color: #888;   /* IE7 only */
+
   -moz-border-radius: 1em;
 }
 

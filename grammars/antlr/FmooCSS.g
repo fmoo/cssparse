@@ -28,6 +28,7 @@ declaration
 
 ie_prefix_hack
   : STAR
+  | DOT
   ;
 
 ie_suffix_hack
