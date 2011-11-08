@@ -21,9 +21,8 @@ ruleset
 
 declaration
   : ie_prefix_hack?
-    ( property COLON WS* values
-    | font_property COLON WS* font_values
-    ) WS* IMPORTANT?
+    property COLON WS* values
+    WS* IMPORTANT?
     ie_suffix_hack?
   ;
 
@@ -39,22 +38,11 @@ property
   : IDENT WS*
   ;
 
-font_property
-  : 'font-family'
-  | 'font'
-  ;
-
 values
-  : value (WS+ value)*
-  ;
-
-font_values
-  : font_value
-    (
-      ( WS* COMMA WS*
-      | WS+)
-
-      font_value
+  : value 
+    (  (WS+ value)
+    |  (WS* COMMA WS* value)
+    |  SLASH value
     )*
   ;
 
@@ -68,11 +56,6 @@ value
   | HASH
   | MS_EXPRESSION
   | value_function;
-
-font_value
-  : value
-  | (PLUS|MINUS)? DIMENSION SLASH (PLUS|MINUS)? DIMENSION
-  ;
 
 value_function
   : IDENT LPAREN
