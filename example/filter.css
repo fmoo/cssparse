@@ -1,0 +1,8 @@
+.LFXBlind {
+  opacity:    0.5;
+  -ms-filter: "alpha(opacity=75)";
+  filter:     alpha(opacity=75);
+  background: #999;
+  position:   absolute;
+  z-index:    5005;
+}

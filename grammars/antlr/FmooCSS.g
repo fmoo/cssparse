@@ -60,9 +60,11 @@ value_function
   ;
 
 value_function_param
-  : NUMBER
-  | PERCENTAGE
-  | IDENT EQUALS STRING
+  : (IDENT EQUALS)?
+     ( NUMBER
+     | PERCENTAGE
+     | STRING
+     )
   ;
 
 /**
