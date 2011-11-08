@@ -43,10 +43,10 @@ values
   ;
 
 value
-  : NUMBER
+  : (PLUS|MINUS)? NUMBER
+  | (PLUS|MINUS)? PERCENTAGE
+  | (PLUS|MINUS)? DIMENSION
   | (IDENT|STRING) (COMMA IDENT|STRING)*  // e.g. font list
-  | PERCENTAGE
-  | DIMENSION
   | URL
   | HASH
   | value_function;
@@ -332,8 +332,8 @@ ATKEYWORD
   ;
 
 NUMBER
-  :	DIGIT+ ('.' DIGIT+)?
-  |	'.' DIGIT+
+  : DIGIT+
+  | DIGIT* DOT DIGIT+
   ;
 
 DIMENSION
