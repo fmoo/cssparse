@@ -46,7 +46,7 @@ value
   : (PLUS|MINUS)? NUMBER
   | (PLUS|MINUS)? PERCENTAGE
   | (PLUS|MINUS)? DIMENSION
-  | (IDENT|STRING) (COMMA IDENT|STRING)*  // e.g. font list
+  | (IDENT|STRING) (COMMA WS* IDENT|STRING)*  // e.g. font list
   | URL
   | HASH
   | value_function;
