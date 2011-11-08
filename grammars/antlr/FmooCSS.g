@@ -26,7 +26,7 @@ declaration
   ;
 
 ie_prefix_hack
-  : STAR
+  : STAR WS*
   | DOT
   ;
 
