@@ -62,6 +62,7 @@ value_function
 value_function_param
   : NUMBER
   | PERCENTAGE
+  | IDENT EQUALS STRING
   ;
 
 /**
