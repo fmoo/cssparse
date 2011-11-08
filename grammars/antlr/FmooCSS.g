@@ -39,14 +39,21 @@ property
   ;
 
 values
-  : value (WS+ value)*
+  : value
+    (
+      ( WS* COMMA WS*
+      | WS+)
+
+      value
+    )*
   ;
 
 value
   : (PLUS|MINUS)? NUMBER
   | (PLUS|MINUS)? PERCENTAGE
   | (PLUS|MINUS)? DIMENSION
-  | (IDENT|STRING) (COMMA WS* IDENT|STRING)*  // e.g. font list
+  | IDENT
+  | STRING
   | URL
   | HASH
   | MS_EXPRESSION
