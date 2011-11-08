@@ -1,10 +1,15 @@
 tt, code, kbd {font-family:"Courier New",Courier,monospace; font-size:82%}
 
-div.gk-arrow p.gk-arrow-label {                
+div.gk-arrow p.gk-arrow-label {
     font:bold 10px Helvetica, Arial, sans-serif;
 }
 
 .MN_Menu, .MN_Menu .MN_Label
 {
     font-family: 'Microsoft Sans Serif' , Tahoma, Arial, Verdana, Sans-Serif;
+}
+
+#maincolumn ul {
+  color: #6d84b4;
+  font: 14px/20px Georgia;
 }

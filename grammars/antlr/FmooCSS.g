@@ -49,12 +49,12 @@ values
   ;
 
 font_values
-  : value
+  : font_value
     (
       ( WS* COMMA WS*
       | WS+)
 
-      value
+      font_value
     )*
   ;
 
@@ -68,6 +68,11 @@ value
   | HASH
   | MS_EXPRESSION
   | value_function;
+
+font_value
+  : value
+  | (PLUS|MINUS)? DIMENSION SLASH (PLUS|MINUS)? DIMENSION
+  ;
 
 value_function
   : IDENT LPAREN
@@ -315,6 +320,10 @@ STAR
 
 PIPE
   : '|'
+  ;
+
+SLASH
+  : '/'
   ;
 
 SLASHNINE
