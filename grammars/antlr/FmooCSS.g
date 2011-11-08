@@ -41,10 +41,15 @@ property
 
 values
   : value 
-    (  (WS+ value)
-    |  (WS* COMMA WS* value)
-    |  SLASH value
+    ( (WS+ value)
+    | (WS* COMMA WS* value)
+    | SLASH value
     )*
+  ;
+
+name_values
+  : IDENT WS* EQUALS WS* value
+    ( WS* COMMA WS* IDENT WS* EQUALS WS* value )*
   ;
 
 value
@@ -60,24 +65,18 @@ value
 
 value_function
   : function_name LPAREN
-      (WS* value_function_param
-       (WS* COMMA WS* value_function_param)*
-      )?
+    ( WS*
+    | WS*
+      ( name_values 
+      | values
+      )
+      WS*
+    )
     RPAREN
   ;
 
 function_name
   : IDENT ((COLON|DOT) IDENT)*
-  ;
-
-value_function_param
-  : (IDENT WS* EQUALS WS*)?
-     ( NUMBER
-     | PERCENTAGE
-     | STRING
-     | HASH
-     | IDENT
-     )
   ;
 
 /**

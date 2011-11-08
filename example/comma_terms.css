@@ -22,3 +22,15 @@ div.source {margin-top:1.4em; margin-bottom:1.3em}
   top: 10%;
   border-radius: 3px;
 }
+
+.chromeBar.aclb {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fafbfe),
+    to(#e2e5eb)
+  );
+  border-color: #b9bcc1;
+  box-shadow: inset 0 1px 1px -1px #fff;
+}
