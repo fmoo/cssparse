@@ -64,6 +64,8 @@ value_function_param
      ( NUMBER
      | PERCENTAGE
      | STRING
+     | HASH
+     | IDENT
      )
   ;
 

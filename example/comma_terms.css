@@ -5,3 +5,7 @@ dl.param dd {margin-top:1em; margin-bottom:1em}
 dl.param ul {margin-top:1em; margin-bottom:1em}
 tt, code, kbd {font-family:"Courier New",Courier,monospace; font-size:82%}
 div.source {margin-top:1.4em; margin-bottom:1.3em}
+
+.tickerActionExpandableButton .tickerActionButtonLink {            
+  background-image: -moz-linear-gradient(bottom, #f7f7f7, #fff);
+}
