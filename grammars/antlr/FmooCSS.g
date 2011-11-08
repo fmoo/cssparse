@@ -43,11 +43,10 @@ values
   ;
 
 value
-  : IDENT
-  | NUMBER
+  : NUMBER
+  | (IDENT|STRING) (COMMA IDENT|STRING)*  // e.g. font list
   | PERCENTAGE
   | DIMENSION
-  | STRING
   | URL
   | HASH IDENT
   | value_function;
