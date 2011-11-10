@@ -10,12 +10,24 @@ styleSheet
 
 statement
   : ruleset
-  //| at_rule
+  | at_rule
+  ;
+
+at_rule
+  : ATKEYWORD (WS* value)* WS*  /* Support things like @import */
+    ( LBRACE WS*  /* Support things like @media */
+        (ruleset WS*)+
+      RBRACE
+    | LBRACE WS*  /* Support things like @font-face */
+        declaration? (SEMI WS* declaration?)*
+      RBRACE
+    | SEMI
+    )
   ;
 
 ruleset
-  : selectors_group WS* LBRACE
-      WS* declaration? (SEMI WS* declaration?)*
+  : selectors_group WS* LBRACE WS*
+      declaration? (SEMI WS* declaration?)*
     RBRACE
   ;
 

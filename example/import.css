@@ -1,0 +1,12 @@
+/**
+ * foo main css source file
+ *
+ * @option ignore
+ */
+
+@import url("foo.css");
+@import url("bar.css");
+
+.foo-container {
+  width: 140px !important;
+}

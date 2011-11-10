@@ -1,0 +1,8 @@
+/* fonts */
+@font-face {
+  font-family: League_Gothic;
+  src: url('/f8_launch_page/fonts/league_gothic.otf');
+}
+.league_gothic {
+  font-family: "League_Gothic", Lucida, Verdana, Helvetica, sans-serif;
+}

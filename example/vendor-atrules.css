@@ -1,0 +1,8 @@
+@-webkit-keyframes dialogHaloPulse {
+ from {
+   background-color: rgba(82,82,82,0.8);
+ }
+ to {
+   background-color: rgba(82,82,82,0.5);
+ }
+}
