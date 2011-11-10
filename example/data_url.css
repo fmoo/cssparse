@@ -5,3 +5,7 @@ li {
     left center;
   padding: 5px 0 5px 25px;
 }
+
+td {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACW5fLtq7ekdd66evtyxTchqNn82cr1i2d2yBpnLl6vnM27P7+ZzfsmKzeO75Qzjt+oTPry2dAqNZSdyE8VfbJGcSo/kQ2F+AO8pJJKKqkfMfU/hM/KaicmSuAAAAAASUVORK5CYII=);                  
+}
