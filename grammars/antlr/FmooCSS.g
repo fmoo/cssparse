@@ -1,4 +1,5 @@
 grammar CSS;
+options {output=AST;}
 
 /**
  * Based loosely on http://www.w3.org/TR/css3-syntax/#style
