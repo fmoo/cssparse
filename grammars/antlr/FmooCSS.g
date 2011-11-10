@@ -5,7 +5,7 @@ options {output=AST;}
  * Based loosely on http://www.w3.org/TR/css3-syntax/#style
  */
 styleSheet
-  : ( CDO | CDC | WS | statement )*
+  : ( CDO | CDC | WS | statement )* EOF
   ;
 
 statement
