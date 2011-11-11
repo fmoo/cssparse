@@ -18,8 +18,7 @@ def get_example_file_dirs():
 
 
 def get_test_dir():
-    return os.path.dirname(__file__)         
-
+    return os.path.dirname(__file__)
 
 
 def iter_example_files():
@@ -54,6 +53,7 @@ def make_test_function(file):
 for i, file in enumerate(iter_example_files()):
     setattr(TestCSSParser, 'test_css_file_%d (%s)' % (i + 1, file),
             make_test_function(file))
+
 
 if __name__ == '__main__':
     unittest2.main()
