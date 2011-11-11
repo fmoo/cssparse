@@ -15,7 +15,7 @@ class ErrorCapturingRecognizer(antlr3.BaseRecognizer):
 
     def emitErrorMessage(self, msg):
         if self.emit_errors:
-            super(ErrorCapturingCSSParser, self).emitErrorMessage(msg)
+            super(ErrorCapturingRecognizer, self).emitErrorMessage(msg)
 
     def makeErrorDict(self, e):
         return {
