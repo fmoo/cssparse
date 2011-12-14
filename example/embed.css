@@ -1,5 +1,5 @@
 .filterMenuButton {
-  upskin: Embed(source='../assets/tab_over.png',scaleGridTop='3',scaleGridLeft='2',scaleGridBottom='4',scaleGridRight='3');                                                   
+  upskin: Embed(source='../assets/tab_over.png',scaleGridTop='3',scaleGridLeft='2',scaleGridBottom='4',scaleGridRight='3');
   overskin: Embed(source='../assets/tab_over.png',scaleGridTop='3',scaleGridLeft='2',scaleGridBottom='4',scaleGridRight='3');
   disabledskin: Embed(source='../assets/tab_over.png',scaleGridTop='3',scaleGridLeft='2',scaleGridBottom='4',scaleGridRight='3');
   downskin: Embed(source='../assets/tab_over.png',scaleGridTop='3',scaleGridLeft='2',scaleGridBottom='4',scaleGridRight='3');

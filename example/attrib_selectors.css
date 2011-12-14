@@ -2,7 +2,7 @@
 #mw_content a.extiw[href ^="irc://"],
 .link-irc {
         background: url(discussionitem_icon.gif) center right no-repeat;
-        padding-right: 18px;                                                          
+        padding-right: 18px;
 }
 
 #mw_content a.external[href $=".ogg"], #mw_content a.external[href $=".OGG"],
