@@ -67,6 +67,7 @@ ie_suffix_hack
 
 property
   : IDENT WS*
+  | HASH WS*
   ;
 
 values
@@ -193,8 +194,7 @@ negation
   ;
 
 negation_arg
-  : type_selector | universal | HASH
-  | cssclass | attrib | pseudo
+  : simple_selector_sequence 
   ;
 
 

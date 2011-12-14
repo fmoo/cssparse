@@ -23,3 +23,10 @@
 
   vertical-align: baseline;
 }
+
+/* safari hacks */
+body:last-child:not(:root:root) .tps_body .ticket_title .ticket_data #ticket_subject_editor {
+  padding: 4px 0px 0px 0px;
+}
+
+.cke_skin_v2 .cke_browser_ie .cke_toolgroup{#float:none;#display:inline;}
