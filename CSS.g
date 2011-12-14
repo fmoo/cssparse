@@ -194,7 +194,7 @@ negation
   ;
 
 negation_arg
-  : simple_selector_sequence 
+  : simple_selector_sequence
   ;
 
 
