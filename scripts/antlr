@@ -1,0 +1,2 @@
+#!/usr/bin/env bash                                                                                                                             
+java -cp ~/src/antlr-3.4/lib/antlr-3.4-complete.jar:~/src/antlr-php/lib/antlr.jar:. -jar ~/src/antlr-3.4/lib/antlr-3.4-complete.jar $*
